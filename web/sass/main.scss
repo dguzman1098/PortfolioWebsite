@@ -1,0 +1,247 @@
+
+$powderAsh: #B8BFBB;
+$outerSpace: #293539;
+$leather: #92724F;
+$millbrook: #64493A;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 5px 30px 5px 30px;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.navbar-link {
+    color: $powderAsh;
+    text-decoration: none;
+    margin: 3rem;
+}
+
+.navbar-link:hover {
+    color: $leather;
+}
+
+.logo {
+    color: white;
+
+}
+
+.logo:hover {
+    color: $leather;
+    
+}
+
+.page-title {
+    text-align: center;
+    color: white;
+    margin: 0 0 2rem 0;
+
+}
+
+/* Main Page (Landing Page) */
+
+.main-background {
+    height: 90vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($powderAsh, 0.8),
+        rgba($outerSpace, 0.0)),
+        url(../images/beach-glasses.jpg);
+        background-size: cover;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary{
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    color: $millbrook;
+    text-transform: uppercase;
+}
+
+.heading-primary--main {
+    display: block;
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 35px;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.footer {
+    color: white;
+    padding: 1rem;
+    background-color: $outerSpace;
+}
+
+.contact-text {
+    text-align: center;
+    color: $leather;
+}
+
+
+/* About Page */
+
+.about-jumbo {
+    height: 75vh;
+    background-color: $leather;
+    padding-top: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.about-text {
+    text-align: center;
+    color: white;
+    
+}
+
+.feature-box {
+    margin-top: 3rem;
+    transition: transform 0.3s;
+}
+
+.feature-box:hover{
+    transform: translateY(-1.5rem), scale(1.00);
+}
+
+
+/* Experience Page */
+
+.experience-jumbo {
+    height: 75vh;
+    background-color: $millbrook;
+    padding-top: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.eCard {
+    perspective: 150rem;
+    position: relative;
+    height: 30rem;
+}
+
+.eCard__side {
+    text-align: center;
+    color: $millbrook;
+    height: 30rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0, 0.15) ;
+    transition: all .08s ease;
+    backface-visibility: hidden;
+}
+
+.eCard__side--front {
+    background-color: $powderAsh;
+}
+
+.eCard__side--back {
+    background-image: linear-gradient(to right bottom, $powderAsh, $outerSpace);
+    transform: rotateY(180deg);
+}
+
+.eCard:hover .eCard__side--front {
+    transform: rotateY(-180deg);
+}
+
+.eCard:hover .eCard__side--back {
+    transform: rotateY(0);
+}
+
+.eCard__picture {
+    background-size: cover;
+    height: 13rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+
+.eCard__picture--1 {
+    background-image: linear-gradient(to right bottom, rgba($powderAsh, 0.8), rgba($outerSpace, 0.0)),
+        url(../images/yearup.png);
+
+}
+
+.eCard__picture--2 {
+    background-image: linear-gradient(to right bottom,rgba($powderAsh, 0.8),rgba($outerSpace, 0.0)),
+        url(../images/deltech.jpg);
+}
+
+.eCard__picture--3 {
+    background-image: linear-gradient(to right bottom, rgba($powderAsh, 0.8), rgba($outerSpace, 0.0)), 
+        url(../images/computer-repair.jpg);
+}
+
+.eCard__details {
+    margin-top: 2rem;
+}
+
+.eCard__cta {
+    margin: 2rem 0.5rem 2rem 0.5rem;
+    color:white;
+    font-size: 18px;
+    padding: 0 1rem 0 1rem;
+    font-weight: 200;
+    
+}
+
+.checkMeOut {
+    color: $outerSpace;
+    text-transform: uppercase;
+}
+
+.checkMeOut:hover {
+    color: $outerSpace;
+    font-size: 21px;
+    font-weight: bolder;
+    
+}
+
+
+/* Contact Page */
+
+.contact {
+    background-color: $leather;
+    padding-top: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.contact-info {
+    color: black;
+    font-size: 18px;
+    margin: 1rem 0 1rem 0;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+
+
